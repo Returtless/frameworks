@@ -17,4 +17,6 @@ target 'frameworks' do
   end
 
 pod 'GoogleMaps'
+
+# pod 'RealmSwift', '~> 4.4.1'
 end

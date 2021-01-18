@@ -3,22 +3,23 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0C282F5D1D0C45EAA168FD72 /* Pods_frameworks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23255621AC5125CCAE553D0C /* Pods_frameworks.framework */; };
+		4781F7FAA45B58FB651FCB73 /* Pods_frameworksTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 611AE183492E8B4D556711B9 /* Pods_frameworksTests.framework */; };
+		4CD21F50FCDF8C584C1122CF /* Pods_frameworks_frameworksUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F53BD9E2026134C3C91D4BE2 /* Pods_frameworks_frameworksUITests.framework */; };
 		5233FC7925B0D62E00F7FD70 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5233FC7825B0D62E00F7FD70 /* AppDelegate.swift */; };
 		5233FC7B25B0D62E00F7FD70 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5233FC7A25B0D62E00F7FD70 /* SceneDelegate.swift */; };
 		5233FC7D25B0D62E00F7FD70 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5233FC7C25B0D62E00F7FD70 /* ViewController.swift */; };
 		5233FC8025B0D62E00F7FD70 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5233FC7E25B0D62E00F7FD70 /* Main.storyboard */; };
 		5233FC8225B0D63000F7FD70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5233FC8125B0D63000F7FD70 /* Assets.xcassets */; };
 		5233FC8525B0D63000F7FD70 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5233FC8325B0D63000F7FD70 /* LaunchScreen.storyboard */; };
-		5233FC9025B0D63000F7FD70 /* frameworksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5233FC8F25B0D63000F7FD70 /* frameworksTests.swift */; };
-		5233FC9B25B0D63000F7FD70 /* frameworksUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5233FC9A25B0D63000F7FD70 /* frameworksUITests.swift */; };
 		5233FCB625B0DA0700F7FD70 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5233FCB525B0DA0700F7FD70 /* MapViewController.swift */; };
-		851C70C5913B089CB42EB6AE /* Pods_frameworksTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B09A7AA8215AB1656D4D6B38 /* Pods_frameworksTests.framework */; };
-		C50FB2AF3A7A4292845EC50A /* Pods_frameworks_frameworksUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0249A6FB36F6267C6C2E1D12 /* Pods_frameworks_frameworksUITests.framework */; };
+		5233FCD925B62A9C00F7FD70 /* CoordsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5233FCD825B62A9C00F7FD70 /* CoordsModel.swift */; };
+		5291998425B63D2C0081ABC6 /* Pods_frameworks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5291998325B63D2C0081ABC6 /* Pods_frameworks.framework */; };
+		5291999625B63EFD0081ABC6 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 5291999525B63EFD0081ABC6 /* Realm */; };
+		5291999825B63EFD0081ABC6 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 5291999725B63EFD0081ABC6 /* RealmSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,10 +40,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0249A6FB36F6267C6C2E1D12 /* Pods_frameworks_frameworksUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_frameworks_frameworksUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		23255621AC5125CCAE553D0C /* Pods_frameworks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_frameworks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		47DAF3B374A881A8F92E7B4B /* Pods-frameworks-frameworksUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-frameworks-frameworksUITests.debug.xcconfig"; path = "Target Support Files/Pods-frameworks-frameworksUITests/Pods-frameworks-frameworksUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		4CF63562B4E7FA069D1DBB0B /* Pods-frameworks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-frameworks.release.xcconfig"; path = "Target Support Files/Pods-frameworks/Pods-frameworks.release.xcconfig"; sourceTree = "<group>"; };
+		14060892A12E09EFF8E40906 /* Pods-frameworks-frameworksUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-frameworks-frameworksUITests.debug.xcconfig"; path = "Target Support Files/Pods-frameworks-frameworksUITests/Pods-frameworks-frameworksUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		3632C28F51086DC63A03565E /* Pods-frameworksTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-frameworksTests.release.xcconfig"; path = "Target Support Files/Pods-frameworksTests/Pods-frameworksTests.release.xcconfig"; sourceTree = "<group>"; };
+		3A1E5BBFA17D74D8173083F8 /* Pods-frameworks-frameworksUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-frameworks-frameworksUITests.release.xcconfig"; path = "Target Support Files/Pods-frameworks-frameworksUITests/Pods-frameworks-frameworksUITests.release.xcconfig"; sourceTree = "<group>"; };
+		4109E04659C1F0C105B0D668 /* Pods-frameworksTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-frameworksTests.debug.xcconfig"; path = "Target Support Files/Pods-frameworksTests/Pods-frameworksTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5233FC7525B0D62E00F7FD70 /* frameworks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = frameworks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5233FC7825B0D62E00F7FD70 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5233FC7A25B0D62E00F7FD70 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,11 +59,15 @@
 		5233FC9A25B0D63000F7FD70 /* frameworksUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = frameworksUITests.swift; sourceTree = "<group>"; };
 		5233FC9C25B0D63000F7FD70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5233FCB525B0DA0700F7FD70 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
-		6D0DAFDC18E2F901DC74174A /* Pods-frameworksTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-frameworksTests.release.xcconfig"; path = "Target Support Files/Pods-frameworksTests/Pods-frameworksTests.release.xcconfig"; sourceTree = "<group>"; };
-		89CBA56305DCBE1F83FA90F5 /* Pods-frameworks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-frameworks.debug.xcconfig"; path = "Target Support Files/Pods-frameworks/Pods-frameworks.debug.xcconfig"; sourceTree = "<group>"; };
-		8C19DD7F80D0D27696EDABB9 /* Pods-frameworks-frameworksUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-frameworks-frameworksUITests.release.xcconfig"; path = "Target Support Files/Pods-frameworks-frameworksUITests/Pods-frameworks-frameworksUITests.release.xcconfig"; sourceTree = "<group>"; };
-		B09A7AA8215AB1656D4D6B38 /* Pods_frameworksTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_frameworksTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DB44E6158032B9D3D8FA85FC /* Pods-frameworksTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-frameworksTests.debug.xcconfig"; path = "Target Support Files/Pods-frameworksTests/Pods-frameworksTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5233FCD825B62A9C00F7FD70 /* CoordsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordsModel.swift; sourceTree = "<group>"; };
+		5291997125B63CB50081ABC6 /* RealmSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5291997325B63CB70081ABC6 /* Realm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Realm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5291998325B63D2C0081ABC6 /* Pods_frameworks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_frameworks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		54416A2CA09362B94BFDB079 /* Pods-frameworks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-frameworks.debug.xcconfig"; path = "Target Support Files/Pods-frameworks/Pods-frameworks.debug.xcconfig"; sourceTree = "<group>"; };
+		611AE183492E8B4D556711B9 /* Pods_frameworksTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_frameworksTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5248E18AD3DDF729FAD3A17 /* Pods-frameworks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-frameworks.release.xcconfig"; path = "Target Support Files/Pods-frameworks/Pods-frameworks.release.xcconfig"; sourceTree = "<group>"; };
+		F53BD9E2026134C3C91D4BE2 /* Pods_frameworks_frameworksUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_frameworks_frameworksUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F73659A1F62819251D20E378 /* Pods_frameworks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_frameworks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,7 +75,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C282F5D1D0C45EAA168FD72 /* Pods_frameworks.framework in Frameworks */,
+				5291999825B63EFD0081ABC6 /* RealmSwift in Frameworks */,
+				5291999625B63EFD0081ABC6 /* Realm in Frameworks */,
+				5291998425B63D2C0081ABC6 /* Pods_frameworks.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,7 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				851C70C5913B089CB42EB6AE /* Pods_frameworksTests.framework in Frameworks */,
+				4781F7FAA45B58FB651FCB73 /* Pods_frameworksTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,13 +93,39 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C50FB2AF3A7A4292845EC50A /* Pods_frameworks_frameworksUITests.framework in Frameworks */,
+				4CD21F50FCDF8C584C1122CF /* Pods_frameworks_frameworksUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		36C65E2169D9D7848CE33DEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5291998325B63D2C0081ABC6 /* Pods_frameworks.framework */,
+				5291997325B63CB70081ABC6 /* Realm.framework */,
+				5291997125B63CB50081ABC6 /* RealmSwift.framework */,
+				F73659A1F62819251D20E378 /* Pods_frameworks.framework */,
+				F53BD9E2026134C3C91D4BE2 /* Pods_frameworks_frameworksUITests.framework */,
+				611AE183492E8B4D556711B9 /* Pods_frameworksTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3E3F46C5F7D103C901B4B71F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				54416A2CA09362B94BFDB079 /* Pods-frameworks.debug.xcconfig */,
+				B5248E18AD3DDF729FAD3A17 /* Pods-frameworks.release.xcconfig */,
+				14060892A12E09EFF8E40906 /* Pods-frameworks-frameworksUITests.debug.xcconfig */,
+				3A1E5BBFA17D74D8173083F8 /* Pods-frameworks-frameworksUITests.release.xcconfig */,
+				4109E04659C1F0C105B0D668 /* Pods-frameworksTests.debug.xcconfig */,
+				3632C28F51086DC63A03565E /* Pods-frameworksTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		5233FC6C25B0D62E00F7FD70 = {
 			isa = PBXGroup;
 			children = (
@@ -100,8 +133,8 @@
 				5233FC8E25B0D63000F7FD70 /* frameworksTests */,
 				5233FC9925B0D63000F7FD70 /* frameworksUITests */,
 				5233FC7625B0D62E00F7FD70 /* Products */,
-				5E40073414611D66F0FDA416 /* Pods */,
-				B6D169FCFE9451A333D7E926 /* Frameworks */,
+				3E3F46C5F7D103C901B4B71F /* Pods */,
+				36C65E2169D9D7848CE33DEA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -126,6 +159,7 @@
 				5233FC8325B0D63000F7FD70 /* LaunchScreen.storyboard */,
 				5233FC8625B0D63000F7FD70 /* Info.plist */,
 				5233FCB525B0DA0700F7FD70 /* MapViewController.swift */,
+				5233FCD825B62A9C00F7FD70 /* CoordsModel.swift */,
 			);
 			path = frameworks;
 			sourceTree = "<group>";
@@ -148,29 +182,6 @@
 			path = frameworksUITests;
 			sourceTree = "<group>";
 		};
-		5E40073414611D66F0FDA416 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				89CBA56305DCBE1F83FA90F5 /* Pods-frameworks.debug.xcconfig */,
-				4CF63562B4E7FA069D1DBB0B /* Pods-frameworks.release.xcconfig */,
-				47DAF3B374A881A8F92E7B4B /* Pods-frameworks-frameworksUITests.debug.xcconfig */,
-				8C19DD7F80D0D27696EDABB9 /* Pods-frameworks-frameworksUITests.release.xcconfig */,
-				DB44E6158032B9D3D8FA85FC /* Pods-frameworksTests.debug.xcconfig */,
-				6D0DAFDC18E2F901DC74174A /* Pods-frameworksTests.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
-		B6D169FCFE9451A333D7E926 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				23255621AC5125CCAE553D0C /* Pods_frameworks.framework */,
-				0249A6FB36F6267C6C2E1D12 /* Pods_frameworks_frameworksUITests.framework */,
-				B09A7AA8215AB1656D4D6B38 /* Pods_frameworksTests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -189,6 +200,10 @@
 			dependencies = (
 			);
 			name = frameworks;
+			packageProductDependencies = (
+				5291999525B63EFD0081ABC6 /* Realm */,
+				5291999725B63EFD0081ABC6 /* RealmSwift */,
+			);
 			productName = frameworks;
 			productReference = 5233FC7525B0D62E00F7FD70 /* frameworks.app */;
 			productType = "com.apple.product-type.application";
@@ -263,6 +278,9 @@
 				Base,
 			);
 			mainGroup = 5233FC6C25B0D62E00F7FD70;
+			packageReferences = (
+				5291999425B63EFD0081ABC6 /* XCRemoteSwiftPackageReference "realm-cocoa" */,
+			);
 			productRefGroup = 5233FC7625B0D62E00F7FD70 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -409,6 +427,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5233FCD925B62A9C00F7FD70 /* CoordsModel.swift in Sources */,
 				5233FC7D25B0D62E00F7FD70 /* ViewController.swift in Sources */,
 				5233FC7925B0D62E00F7FD70 /* AppDelegate.swift in Sources */,
 				5233FC7B25B0D62E00F7FD70 /* SceneDelegate.swift in Sources */,
@@ -420,7 +439,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5233FC9025B0D63000F7FD70 /* frameworksTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,7 +446,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5233FC9B25B0D63000F7FD70 /* frameworksUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -585,8 +602,9 @@
 		};
 		5233FCA025B0D63000F7FD70 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 89CBA56305DCBE1F83FA90F5 /* Pods-frameworks.debug.xcconfig */;
+			baseConfigurationReference = 54416A2CA09362B94BFDB079 /* Pods-frameworks.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -605,8 +623,9 @@
 		};
 		5233FCA125B0D63000F7FD70 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4CF63562B4E7FA069D1DBB0B /* Pods-frameworks.release.xcconfig */;
+			baseConfigurationReference = B5248E18AD3DDF729FAD3A17 /* Pods-frameworks.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -625,7 +644,7 @@
 		};
 		5233FCA325B0D63000F7FD70 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DB44E6158032B9D3D8FA85FC /* Pods-frameworksTests.debug.xcconfig */;
+			baseConfigurationReference = 4109E04659C1F0C105B0D668 /* Pods-frameworksTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -648,7 +667,7 @@
 		};
 		5233FCA425B0D63000F7FD70 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6D0DAFDC18E2F901DC74174A /* Pods-frameworksTests.release.xcconfig */;
+			baseConfigurationReference = 3632C28F51086DC63A03565E /* Pods-frameworksTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -671,7 +690,7 @@
 		};
 		5233FCA625B0D63000F7FD70 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 47DAF3B374A881A8F92E7B4B /* Pods-frameworks-frameworksUITests.debug.xcconfig */;
+			baseConfigurationReference = 14060892A12E09EFF8E40906 /* Pods-frameworks-frameworksUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -692,7 +711,7 @@
 		};
 		5233FCA725B0D63000F7FD70 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8C19DD7F80D0D27696EDABB9 /* Pods-frameworks-frameworksUITests.release.xcconfig */;
+			baseConfigurationReference = 3A1E5BBFA17D74D8173083F8 /* Pods-frameworks-frameworksUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -751,6 +770,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5291999425B63EFD0081ABC6 /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-cocoa";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.5.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5291999525B63EFD0081ABC6 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5291999425B63EFD0081ABC6 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = Realm;
+		};
+		5291999725B63EFD0081ABC6 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5291999425B63EFD0081ABC6 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5233FC6D25B0D62E00F7FD70 /* Project object */;
 }

@@ -32,13 +32,28 @@
                     </view>
                     <navigationItem key="navigationItem" id="JZ0-B2-8SJ">
                         <rightBarButtonItems>
-                            <barButtonItem title="Stop route" landscapeImage="GMSNavNightModeSprites-0-1x.png" id="FwS-S7-cLb"/>
-                            <barButtonItem title="Add route" id="QfO-Gi-VgD"/>
-                            <barButtonItem title="Last route" id="S5m-n6-YTw"/>
+                            <barButtonItem title="Stop route" landscapeImage="GMSNavNightModeSprites-0-1x.png" id="FwS-S7-cLb">
+                                <connections>
+                                    <action selector="stopButtonWasTapped:" destination="BYZ-38-t0r" id="xib-wh-6h9"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Add route" id="QfO-Gi-VgD">
+                                <connections>
+                                    <action selector="addButtonWasTapped:" destination="BYZ-38-t0r" id="8eq-Es-tFV"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Last route" id="S5m-n6-YTw">
+                                <connections>
+                                    <action selector="lastRouteButtonWasTapped:" destination="BYZ-38-t0r" id="jZ6-xe-x89"/>
+                                </connections>
+                            </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
+                        <outlet property="addButton" destination="QfO-Gi-VgD" id="n52-2v-M0v"/>
+                        <outlet property="lastButton" destination="S5m-n6-YTw" id="3no-YO-WnE"/>
                         <outlet property="mapView" destination="1Ev-Jm-p1R" id="Te9-c6-dmf"/>
+                        <outlet property="stopButton" destination="FwS-S7-cLb" id="Dof-1O-eEM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
