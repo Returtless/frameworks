@@ -8,45 +8,93 @@
 import UIKit
 import GoogleMaps
 import CoreLocation
-
+import Realm
+import RealmSwift
 class MapViewController: UIViewController {
     
     @IBOutlet weak var mapView: GMSMapView!
     var locationManager: CLLocationManager?
-
-
+    var route: GMSPolyline?
+    var routePath: GMSMutablePath?
+    @IBOutlet weak var addButton: UIBarButtonItem!
+    @IBOutlet weak var stopButton: UIBarButtonItem!
+    @IBOutlet weak var lastButton: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         configureLocationManager()
-        locationManager?.startUpdatingLocation()
-        
     }
     
     func configureLocationManager() {
-        
         locationManager = CLLocationManager()
         locationManager?.delegate = self
         locationManager?.distanceFilter = 100.0;
-        locationManager?.desiredAccuracy = kCLLocationAccuracyBest;
-        locationManager?.requestWhenInUseAuthorization()
+        locationManager?.allowsBackgroundLocationUpdates = true
+        locationManager?.pausesLocationUpdatesAutomatically = false
+        locationManager?.startMonitoringSignificantLocationChanges()
+        
+        locationManager?.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+        locationManager?.requestAlwaysAuthorization()
     }
     
+    @IBAction func stopButtonWasTapped(_ sender: UIBarButtonItem) {
+        let realm = try! Realm()
+        try! realm.write {
+            realm.deleteAll()
+        }
+        var arr : [CoordsModel]  = []
+        for i in 0..<(routePath!.count() ) {
+            let model = CoordsModel()
+            model.lat = routePath?.coordinate(at: i).latitude.description
+            model.long = routePath?.coordinate(at: i).longitude.description
+            arr.append(model)
+        }
+        saveRealmArray(arr)
+        locationManager?.stopUpdatingLocation()
+    }
     
+    func saveRealmArray(_ objects: [Object]) {
+        let realm = try! Realm()
+        try! realm.write {
+            realm.add(objects)
+        }
+    }
+    
+    @IBAction func lastRouteButtonWasTapped(_ sender: UIBarButtonItem) {
+        let realm = try! Realm()
+        let coords = realm.objects(CoordsModel.self)
+        routePath = GMSMutablePath()
+        coords.forEach(
+            {
+                i in
+                if let lat = Double(i.lat!), let long = Double(i.long!) {
+                    let c = CLLocationCoordinate2D(latitude: Double(lat), longitude: Double(long))
+                    routePath?.add(c)
+                }
+                
+            }
+        )
+        route?.path = routePath
+        let position = GMSCameraPosition.camera(withTarget: routePath!.coordinate(at: routePath!.count()-1), zoom: 17)
+        mapView.animate(to: position)
+    }
+    
+    @IBAction func addButtonWasTapped(_ sender: UIBarButtonItem) {
+        route?.map = nil
+        route = GMSPolyline()
+        routePath = GMSMutablePath()
+        route?.map = mapView
+        locationManager?.startUpdatingLocation()
+    }
 }
 
 extension MapViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let location = locations.last else { return }
-        
-        let camera = GMSCameraPosition.camera(withTarget: location.coordinate, zoom: 17)
-        mapView.camera = camera
-        
-        let marker = GMSMarker(position: location.coordinate)
-        marker.icon = GMSMarker.markerImage(with: .green)
-        marker.map = mapView
-        
+        routePath?.add(location.coordinate)
+        route?.path = routePath
+        let position = GMSCameraPosition.camera(withTarget: location.coordinate, zoom: 17)
+        mapView.animate(to: position)
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
