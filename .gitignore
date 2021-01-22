@@ -70,6 +70,9 @@ Carthage/Build/
 Dependencies/
 .accio/
 
+# Cocoapods
+frameworks/Pods/
+
 # fastlane
 #
 # It is recommended to not store the screenshots in the git repo.
