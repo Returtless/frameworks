@@ -12,7 +12,7 @@
 		5233FC7925B0D62E00F7FD70 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5233FC7825B0D62E00F7FD70 /* AppDelegate.swift */; };
 		5233FC7B25B0D62E00F7FD70 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5233FC7A25B0D62E00F7FD70 /* SceneDelegate.swift */; };
 		5233FC7D25B0D62E00F7FD70 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5233FC7C25B0D62E00F7FD70 /* ViewController.swift */; };
-		5233FC8025B0D62E00F7FD70 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5233FC7E25B0D62E00F7FD70 /* Main.storyboard */; };
+		5233FC8025B0D62E00F7FD70 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5233FC7E25B0D62E00F7FD70 /* Main.storyboard */; settings = {ASSET_TAGS = (Main, ); }; };
 		5233FC8225B0D63000F7FD70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5233FC8125B0D63000F7FD70 /* Assets.xcassets */; };
 		5233FC8525B0D63000F7FD70 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5233FC8325B0D63000F7FD70 /* LaunchScreen.storyboard */; };
 		5233FCB625B0DA0700F7FD70 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5233FCB525B0DA0700F7FD70 /* MapViewController.swift */; };
@@ -20,6 +20,11 @@
 		5291998425B63D2C0081ABC6 /* Pods_frameworks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5291998325B63D2C0081ABC6 /* Pods_frameworks.framework */; };
 		5291999625B63EFD0081ABC6 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 5291999525B63EFD0081ABC6 /* Realm */; };
 		5291999825B63EFD0081ABC6 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 5291999725B63EFD0081ABC6 /* RealmSwift */; };
+		529199A925B9FB400081ABC6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529199A825B9FB400081ABC6 /* LoginViewController.swift */; };
+		529199AE25BA05660081ABC6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529199AD25BA05660081ABC6 /* User.swift */; };
+		529199B325BA09540081ABC6 /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529199B225BA09540081ABC6 /* RealmService.swift */; };
+		529199B825BA12800081ABC6 /* BaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529199B725BA12800081ABC6 /* BaseRouter.swift */; };
+		529199BD25BA1A480081ABC6 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529199BC25BA1A480081ABC6 /* RegisterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +68,11 @@
 		5291997125B63CB50081ABC6 /* RealmSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5291997325B63CB70081ABC6 /* Realm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Realm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5291998325B63D2C0081ABC6 /* Pods_frameworks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_frameworks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		529199A825B9FB400081ABC6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		529199AD25BA05660081ABC6 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		529199B225BA09540081ABC6 /* RealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
+		529199B725BA12800081ABC6 /* BaseRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRouter.swift; sourceTree = "<group>"; };
+		529199BC25BA1A480081ABC6 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		54416A2CA09362B94BFDB079 /* Pods-frameworks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-frameworks.debug.xcconfig"; path = "Target Support Files/Pods-frameworks/Pods-frameworks.debug.xcconfig"; sourceTree = "<group>"; };
 		611AE183492E8B4D556711B9 /* Pods_frameworksTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_frameworksTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5248E18AD3DDF729FAD3A17 /* Pods-frameworks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-frameworks.release.xcconfig"; path = "Target Support Files/Pods-frameworks/Pods-frameworks.release.xcconfig"; sourceTree = "<group>"; };
@@ -151,15 +161,15 @@
 		5233FC7725B0D62E00F7FD70 /* frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				5233FC7825B0D62E00F7FD70 /* AppDelegate.swift */,
+				529199C425BA27CC0081ABC6 /* ViewControllers */,
+				529199C825BA27DE0081ABC6 /* Models */,
+				529199CC25BA280C0081ABC6 /* Services */,
 				5233FC7A25B0D62E00F7FD70 /* SceneDelegate.swift */,
-				5233FC7C25B0D62E00F7FD70 /* ViewController.swift */,
+				5233FC7825B0D62E00F7FD70 /* AppDelegate.swift */,
 				5233FC7E25B0D62E00F7FD70 /* Main.storyboard */,
 				5233FC8125B0D63000F7FD70 /* Assets.xcassets */,
 				5233FC8325B0D63000F7FD70 /* LaunchScreen.storyboard */,
 				5233FC8625B0D63000F7FD70 /* Info.plist */,
-				5233FCB525B0DA0700F7FD70 /* MapViewController.swift */,
-				5233FCD825B62A9C00F7FD70 /* CoordsModel.swift */,
 			);
 			path = frameworks;
 			sourceTree = "<group>";
@@ -180,6 +190,35 @@
 				5233FC9C25B0D63000F7FD70 /* Info.plist */,
 			);
 			path = frameworksUITests;
+			sourceTree = "<group>";
+		};
+		529199C425BA27CC0081ABC6 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				5233FC7C25B0D62E00F7FD70 /* ViewController.swift */,
+				5233FCB525B0DA0700F7FD70 /* MapViewController.swift */,
+				529199A825B9FB400081ABC6 /* LoginViewController.swift */,
+				529199BC25BA1A480081ABC6 /* RegisterViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		529199C825BA27DE0081ABC6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5233FCD825B62A9C00F7FD70 /* CoordsModel.swift */,
+				529199AD25BA05660081ABC6 /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		529199CC25BA280C0081ABC6 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				529199B225BA09540081ABC6 /* RealmService.swift */,
+				529199B725BA12800081ABC6 /* BaseRouter.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -253,6 +292,9 @@
 		5233FC6D25B0D62E00F7FD70 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					Main,
+				);
 				LastSwiftUpdateCheck = 1230;
 				LastUpgradeCheck = 1230;
 				TargetAttributes = {
@@ -427,11 +469,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				529199A925B9FB400081ABC6 /* LoginViewController.swift in Sources */,
+				529199BD25BA1A480081ABC6 /* RegisterViewController.swift in Sources */,
+				529199B825BA12800081ABC6 /* BaseRouter.swift in Sources */,
 				5233FCD925B62A9C00F7FD70 /* CoordsModel.swift in Sources */,
 				5233FC7D25B0D62E00F7FD70 /* ViewController.swift in Sources */,
 				5233FC7925B0D62E00F7FD70 /* AppDelegate.swift in Sources */,
 				5233FC7B25B0D62E00F7FD70 /* SceneDelegate.swift in Sources */,
 				5233FCB625B0DA0700F7FD70 /* MapViewController.swift in Sources */,
+				529199AE25BA05660081ABC6 /* User.swift in Sources */,
+				529199B325BA09540081ABC6 /* RealmService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

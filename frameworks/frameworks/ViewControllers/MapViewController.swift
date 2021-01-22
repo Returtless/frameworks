@@ -38,10 +38,6 @@ class MapViewController: UIViewController {
     }
     
     @IBAction func stopButtonWasTapped(_ sender: UIBarButtonItem) {
-        let realm = try! Realm()
-        try! realm.write {
-            realm.deleteAll()
-        }
         var arr : [CoordsModel]  = []
         for i in 0..<(routePath!.count() ) {
             let model = CoordsModel()
@@ -49,20 +45,12 @@ class MapViewController: UIViewController {
             model.long = routePath?.coordinate(at: i).longitude.description
             arr.append(model)
         }
-        saveRealmArray(arr)
+        RealmService.saveDataToRealm(arr)
         locationManager?.stopUpdatingLocation()
     }
     
-    func saveRealmArray(_ objects: [Object]) {
-        let realm = try! Realm()
-        try! realm.write {
-            realm.add(objects)
-        }
-    }
-    
     @IBAction func lastRouteButtonWasTapped(_ sender: UIBarButtonItem) {
-        let realm = try! Realm()
-        let coords = realm.objects(CoordsModel.self)
+        let coords : [CoordsModel] = RealmService.getDataFromRealm()
         routePath = GMSMutablePath()
         coords.forEach(
             {
