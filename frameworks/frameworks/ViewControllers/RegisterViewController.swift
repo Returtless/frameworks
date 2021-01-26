@@ -25,3 +25,22 @@ class RegisterViewController: UIViewController {
     }
 
 }
+
+extension RegisterViewController {
+    override func viewDidAppear(_ animated: Bool) {
+        NotificationCenter.default.addObserver(self, selector: #selector(hideView(_:)), name: UIApplication.willResignActiveNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(showView(_:)), name: UIApplication.didBecomeActiveNotification, object: nil)
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+            super.viewWillDisappear(animated)
+            NotificationCenter.default.removeObserver(self, name: UIApplication.willResignActiveNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIApplication.didBecomeActiveNotification, object: nil)
+        }
+
+    @objc func hideView(_ notification: Notification) {
+        self.view.isHidden = true
+    }
+    @objc func showView(_ notification: Notification) {
+        self.view.isHidden = false
+    }
+}
