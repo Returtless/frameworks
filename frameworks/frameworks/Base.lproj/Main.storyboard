@@ -133,6 +133,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="nho-JG-8r3"/>
                     <connections>
+                        <outlet property="loginButton" destination="wRj-cP-kMD" id="zf4-In-DgY"/>
                         <outlet property="loginTextField" destination="XmI-2h-CVB" id="uLP-Yv-eM0"/>
                         <outlet property="passwordTextField" destination="Hxe-f4-Jp1" id="cAP-k9-uvE"/>
                         <outlet property="registerLabel" destination="abv-sJ-boB" id="XD4-kg-nuA"/>
