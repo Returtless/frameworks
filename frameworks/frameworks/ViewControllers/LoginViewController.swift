@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class LoginViewController: UIViewController {
     
@@ -15,6 +17,7 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var registerLabel: UILabel!
     
+    @IBOutlet weak var loginButton: UIButton!
     var loginRouter: LoginRouter!
     
     
@@ -23,6 +26,7 @@ class LoginViewController: UIViewController {
         loginRouter = LoginRouter(vc: self)
         configureTextFields()
         configureRegisterLabel()
+        configureLoginBindings()
     }
     
     @IBAction func loginButtonWasTapped(_ sender: UIButton) {
@@ -55,6 +59,18 @@ class LoginViewController: UIViewController {
         let attributedString = NSMutableAttributedString(string: "Зарегистрироваться")
         attributedString.addAttribute(.link, value: "Зарегистрироваться", range: NSRange(location: 0, length: 18))
         registerLabel.attributedText = attributedString
+    }
+    
+    func configureLoginBindings() {
+        Observable.combineLatest(
+            loginTextField.rx.text,
+            passwordTextField.rx.text
+        ).map { login, password in
+            return !(login ?? "").isEmpty && (password ?? "").count >= 3
+        }.bind { [weak loginButton] inputFilled in
+            loginButton?.isEnabled = inputFilled
+            loginButton?.setTitleColor(inputFilled ? UIColor.black : UIColor.gray, for: .normal)
+        }
     }
     
     @objc

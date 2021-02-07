@@ -13,7 +13,7 @@ import RealmSwift
 class MapViewController: UIViewController {
     
     @IBOutlet weak var mapView: GMSMapView!
-    var locationManager: CLLocationManager?
+    let locationManager = LocationManager.instance
     var route: GMSPolyline?
     var routePath: GMSMutablePath?
     @IBOutlet weak var addButton: UIBarButtonItem!
@@ -26,15 +26,16 @@ class MapViewController: UIViewController {
     }
     
     func configureLocationManager() {
-        locationManager = CLLocationManager()
-        locationManager?.delegate = self
-        locationManager?.distanceFilter = 100.0;
-        locationManager?.allowsBackgroundLocationUpdates = true
-        locationManager?.pausesLocationUpdatesAutomatically = false
-        locationManager?.startMonitoringSignificantLocationChanges()
-        
-        locationManager?.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
-        locationManager?.requestAlwaysAuthorization()
+        locationManager
+            .location
+            .asObservable()
+            .bind { [weak self] location in
+                guard let location = location else { return }
+                self?.routePath?.add(location.coordinate)
+                self?.route?.path = self?.routePath
+                let position = GMSCameraPosition.camera(withTarget: location.coordinate, zoom: 17)
+                self?.mapView.animate(to: position)
+            }
     }
     
     @IBAction func stopButtonWasTapped(_ sender: UIBarButtonItem) {
@@ -46,7 +47,7 @@ class MapViewController: UIViewController {
             arr.append(model)
         }
         RealmService.saveDataToRealm(arr)
-        locationManager?.stopUpdatingLocation()
+        locationManager.stopUpdatingLocation()
     }
     
     @IBAction func lastRouteButtonWasTapped(_ sender: UIBarButtonItem) {
@@ -72,7 +73,7 @@ class MapViewController: UIViewController {
         route = GMSPolyline()
         routePath = GMSMutablePath()
         route?.map = mapView
-        locationManager?.startUpdatingLocation()
+        locationManager.startUpdatingLocation()
     }
 }
 

@@ -25,6 +25,9 @@
 		529199B325BA09540081ABC6 /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529199B225BA09540081ABC6 /* RealmService.swift */; };
 		529199B825BA12800081ABC6 /* BaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529199B725BA12800081ABC6 /* BaseRouter.swift */; };
 		529199BD25BA1A480081ABC6 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529199BC25BA1A480081ABC6 /* RegisterViewController.swift */; };
+		529199EA25C0AA960081ABC6 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 529199E925C0AA960081ABC6 /* RxSwift */; };
+		529199EC25C0AA960081ABC6 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 529199EB25C0AA960081ABC6 /* RxCocoa */; };
+		529199FF25C1C1BB0081ABC6 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529199FE25C1C1BB0081ABC6 /* LocationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +76,7 @@
 		529199B225BA09540081ABC6 /* RealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
 		529199B725BA12800081ABC6 /* BaseRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRouter.swift; sourceTree = "<group>"; };
 		529199BC25BA1A480081ABC6 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		529199FE25C1C1BB0081ABC6 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		54416A2CA09362B94BFDB079 /* Pods-frameworks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-frameworks.debug.xcconfig"; path = "Target Support Files/Pods-frameworks/Pods-frameworks.debug.xcconfig"; sourceTree = "<group>"; };
 		611AE183492E8B4D556711B9 /* Pods_frameworksTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_frameworksTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5248E18AD3DDF729FAD3A17 /* Pods-frameworks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-frameworks.release.xcconfig"; path = "Target Support Files/Pods-frameworks/Pods-frameworks.release.xcconfig"; sourceTree = "<group>"; };
@@ -87,6 +91,8 @@
 			files = (
 				5291999825B63EFD0081ABC6 /* RealmSwift in Frameworks */,
 				5291999625B63EFD0081ABC6 /* Realm in Frameworks */,
+				529199EC25C0AA960081ABC6 /* RxCocoa in Frameworks */,
+				529199EA25C0AA960081ABC6 /* RxSwift in Frameworks */,
 				5291998425B63D2C0081ABC6 /* Pods_frameworks.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -217,6 +223,7 @@
 			children = (
 				529199B225BA09540081ABC6 /* RealmService.swift */,
 				529199B725BA12800081ABC6 /* BaseRouter.swift */,
+				529199FE25C1C1BB0081ABC6 /* LocationManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -242,6 +249,8 @@
 			packageProductDependencies = (
 				5291999525B63EFD0081ABC6 /* Realm */,
 				5291999725B63EFD0081ABC6 /* RealmSwift */,
+				529199E925C0AA960081ABC6 /* RxSwift */,
+				529199EB25C0AA960081ABC6 /* RxCocoa */,
 			);
 			productName = frameworks;
 			productReference = 5233FC7525B0D62E00F7FD70 /* frameworks.app */;
@@ -322,6 +331,7 @@
 			mainGroup = 5233FC6C25B0D62E00F7FD70;
 			packageReferences = (
 				5291999425B63EFD0081ABC6 /* XCRemoteSwiftPackageReference "realm-cocoa" */,
+				529199E825C0AA960081ABC6 /* XCRemoteSwiftPackageReference "RxSwift" */,
 			);
 			productRefGroup = 5233FC7625B0D62E00F7FD70 /* Products */;
 			projectDirPath = "";
@@ -472,6 +482,7 @@
 				529199A925B9FB400081ABC6 /* LoginViewController.swift in Sources */,
 				529199BD25BA1A480081ABC6 /* RegisterViewController.swift in Sources */,
 				529199B825BA12800081ABC6 /* BaseRouter.swift in Sources */,
+				529199FF25C1C1BB0081ABC6 /* LocationManager.swift in Sources */,
 				5233FCD925B62A9C00F7FD70 /* CoordsModel.swift in Sources */,
 				5233FC7D25B0D62E00F7FD70 /* ViewController.swift in Sources */,
 				5233FC7925B0D62E00F7FD70 /* AppDelegate.swift in Sources */,
@@ -827,6 +838,14 @@
 				minimumVersion = 10.5.1;
 			};
 		};
+		529199E825C0AA960081ABC6 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -839,6 +858,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 5291999425B63EFD0081ABC6 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
 			productName = RealmSwift;
+		};
+		529199E925C0AA960081ABC6 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 529199E825C0AA960081ABC6 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		529199EB25C0AA960081ABC6 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 529199E825C0AA960081ABC6 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
