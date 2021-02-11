@@ -110,6 +110,20 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nqO-ch-buT">
+                                <rect key="frame" x="107" y="567" width="200" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="QQb-tF-Tkq"/>
+                                    <constraint firstAttribute="width" constant="200" id="e33-el-s0w"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Сделать фото">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="takePicture:" destination="fno-cZ-B1H" eventType="touchUpInside" id="ije-Uh-W55"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="drF-83-NB1"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -121,8 +135,10 @@
                             <constraint firstItem="XmI-2h-CVB" firstAttribute="top" secondItem="X6f-df-o9z" secondAttribute="bottom" constant="150" id="HRI-1q-Zvq"/>
                             <constraint firstItem="abv-sJ-boB" firstAttribute="centerX" secondItem="sCx-aK-nN0" secondAttribute="centerX" id="KB8-2h-ygN"/>
                             <constraint firstItem="Hxe-f4-Jp1" firstAttribute="centerX" secondItem="sCx-aK-nN0" secondAttribute="centerX" id="MxB-ST-C7m"/>
+                            <constraint firstItem="nqO-ch-buT" firstAttribute="centerX" secondItem="sCx-aK-nN0" secondAttribute="centerX" id="VSu-yN-WY2"/>
                             <constraint firstItem="drF-83-NB1" firstAttribute="trailing" secondItem="Hxe-f4-Jp1" secondAttribute="trailing" constant="20" id="WJb-RG-Dfj"/>
                             <constraint firstItem="Hxe-f4-Jp1" firstAttribute="top" secondItem="XmI-2h-CVB" secondAttribute="bottom" constant="20" id="anN-Yg-1zY"/>
+                            <constraint firstItem="nqO-ch-buT" firstAttribute="top" secondItem="wRj-cP-kMD" secondAttribute="bottom" constant="50" id="cmL-Rq-p62"/>
                             <constraint firstItem="X6f-df-o9z" firstAttribute="top" secondItem="drF-83-NB1" secondAttribute="top" constant="50" id="dJG-8j-kKW"/>
                             <constraint firstItem="drF-83-NB1" firstAttribute="trailing" secondItem="XmI-2h-CVB" secondAttribute="trailing" constant="20" id="fND-rB-keK"/>
                             <constraint firstItem="abv-sJ-boB" firstAttribute="top" secondItem="Hxe-f4-Jp1" secondAttribute="bottom" constant="10" id="gYH-xo-mux"/>
